@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Convenient Unit Converter</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>\
+	<link rel="stylesheet" type="text/css" href="ext_styles.css">
+	<script src="initial_boxes.js"></script>
+	<script src="ext_scripts.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script>
+	  $( function() {
+		$( "#sortable" ).sortable();
+		$( "#sortable" ).disableSelection();
+	  } );
+	</script>
+</head>
+
+<body>
+	<nav>
+		<img src="app_icon.jpg" class="media-object" style="width:100%;margin-bottom: 25px;">
+		<ul>
+			<li><a style="padding-top: 1px;padding-bottom: 1px;color: white;" href="#sheet">Sheet</a></li>
+			<li style="margin-left: 8px;"><a style="padding-top: 1px;padding-bottom: 1px;" href="#" onclick="saveSheet()">Save Sheet</a></li>
+			<li style="margin-left: 8px;"><a style="padding-top: 1px;padding-bottom: 1px;" href="#" onclick="loadSheet()">Load Sheet</a>
+										  <input type="file" id="fileload" accept=".json" style="display: none;" onchange="parseSheet()">
+			</li>
+			
+			<li style="margin-top: 8px;color: white;"> Dimensions </li>
+			<li style="margin-left: 8px;"><a style="padding-top: 1px;padding-bottom: 1px;" href="#length">Length</a></li>
+			<li style="margin-left: 8px;"><a style="padding-top: 1px;padding-bottom: 1px;" href="#mass">Mass</a></li>
+			<li style="margin-left: 8px;"><a style="padding-top: 1px;padding-bottom: 1px;" href="#pressure">Pressure</a></li>
+			
+			<li><a style="color: white;"href="#ReadMe">ReadMe</a></li>
+		</ul>
+	</nav>
+
+	<div class="container-fluid Appheader" style="margin-left:100px;padding:3px;">
+		<h1>Convenient Unit Converter</h1>	
+	</div>
+
+	<noscript>
+		<div class="jsDisabled">
+			<span>JavaScript is not enabled! Please load this webpage with javascript enabled to use this Application.</span>
+		</div>
+	</noscript>
+	
+	<div class="right blockRight" id="recentConversions" style="display:none;">
+		<p style="background-color: white; color: brown; margin-bottom:0px;">Recent Conversions</p>
+		<hr style="margin-top: 0px; border-color: #333; margin-bottom:5px;">		
+		<ul style="list-style-type: none; padding-left:5px;" id="recentList">
+		</ul>
+	</div>
+	
+	<div class="left">
+		<!-- Conversion blocks start here -->
+		<div id="sheet" class="container-fluid block" style="margin-top:10px;min-height: 150px;">
+			<div class="blockHeading">Quick-Sheet Conversions</div>
+			<hr style="margin-top: 0px; border-color: #333;">
+			<div id="boxes">	
+				<ul id="sortable">
+				</ul>
+			</div>
+		</div>
+		<div id="length" class="container-fluid block">
+			<div class="blockHeading">Length Conversions</div>
+			<hr style="margin-top: 0px; border-color: #333;">
+			<div id="boxes"></div>
+		</div>
+		<div id="mass" class="container-fluid block">
+			<div class="blockHeading">Mass Conversions</div>
+			<hr style="margin-top: 0px; border-color: #333;">
+			<div id="boxes"></div>
+		</div>
+		<div id="pressure" class="container-fluid block">
+			<div class="blockHeading">Pressure Conversions</div>
+			<hr style="margin-top: 0px; border-color: #333;">
+			<div id="boxes"></div>
+		</div>
+		<div id="ReadMe" class="container-fluid block">
+			<div class="blockHeading">Tool Instructions</div>
+			<hr style="margin-top: 0px; border-color: #333;">
+		</div>
+	</div>
+</body>
+
+<script> generateBoxes() </script>
+<!-- <script> generateSheetBoxes() </script> -->
+</html>
