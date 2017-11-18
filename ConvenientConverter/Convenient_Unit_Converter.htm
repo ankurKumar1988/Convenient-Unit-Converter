@@ -31,9 +31,11 @@
 			</li>
 			
 			<li style="margin-top: 8px;color: white;"> Dimensions </li>
+			<li style="margin-left: 8px;"><a style="padding-top: 1px;padding-bottom: 1px;" href="#ASU">ASU</a></li>
 			<li style="margin-left: 8px;"><a style="padding-top: 1px;padding-bottom: 1px;" href="#length">Length</a></li>
 			<li style="margin-left: 8px;"><a style="padding-top: 1px;padding-bottom: 1px;" href="#mass">Mass</a></li>
 			<li style="margin-left: 8px;"><a style="padding-top: 1px;padding-bottom: 1px;" href="#pressure">Pressure</a></li>
+			<li style="margin-left: 8px;"><a style="padding-top: 1px;padding-bottom: 1px;" href="#custom">Custom</a></li>
 			
 			<li><a style="color: white;"href="#ReadMe">ReadMe</a></li>
 		</ul>
@@ -59,31 +61,64 @@
 	<div class="left">
 		<!-- Conversion blocks start here -->
 		<div id="sheet" class="container-fluid block" style="margin-top:10px;min-height: 150px;">
-			<div class="blockHeading">Quick-Sheet Conversions</div>
+			<div class="blockHeading">Conversions Sheet</div>
 			<hr style="margin-top: 0px; border-color: #333;">
 			<div id="boxes">	
 				<ul id="sortable">
 				</ul>
 			</div>
 		</div>
+		<div id="ASU" class="container-fluid block">
+			<div class="blockHeading">ASU relevant Conversions</div>
+			<hr style="margin-top: 0px; border-color: #333;">
+			<div id="userSelect"></div>
+			<div id="boxes"></div>
+		</div>
 		<div id="length" class="container-fluid block">
 			<div class="blockHeading">Length Conversions</div>
 			<hr style="margin-top: 0px; border-color: #333;">
+			<div id="userSelect"></div>
 			<div id="boxes"></div>
 		</div>
 		<div id="mass" class="container-fluid block">
 			<div class="blockHeading">Mass Conversions</div>
 			<hr style="margin-top: 0px; border-color: #333;">
+			<div id="userSelect"></div>
 			<div id="boxes"></div>
 		</div>
 		<div id="pressure" class="container-fluid block">
 			<div class="blockHeading">Pressure Conversions</div>
 			<hr style="margin-top: 0px; border-color: #333;">
+			<div id="userSelect"></div>
+			<div id="boxes"></div>
+		</div>
+		<div id="custom" class="container-fluid block">
+			<div class="blockHeading">User-defined Conversions</div>
+			<hr style="margin-top: 0px; border-color: #333;">
+			<div id="userSelect"></div>
 			<div id="boxes"></div>
 		</div>
 		<div id="ReadMe" class="container-fluid block">
 			<div class="blockHeading">Tool Instructions</div>
 			<hr style="margin-top: 0px; border-color: #333;">
+			This application allows you to create a 'sheet' of unit conversion sets that can be saved for later use. Multiple such customized sheets can be created. 
+			Several sets of defaults unit conversions have been provided in different unit sections, such as Length Conversions, Mass Conversions, etc.
+			<br><br>
+			Unit Section:<br>
+			In addition to the default unit conversions in each unit section, users can add their own conversion set that follows a linear relationship. 
+			For example, to add a relationship, A = 3B + 2, put A, 3, B, and 2 in the 4 input boxes at the bottom of the unit section and click on 'click to add to list' button.
+			This user-defined conversion gets stored in the system and will be available upon subsequent usage of the application in the same browser. <br><br>
+			Users can also choose a conversion combination using the drop-down lists provided in the top part of a unit section. 
+			The system will be able to provide the conversion facility for the shosen combination of units, if this unit combination can be reached via the unit combinations available in conversion sets shown in the middle part of the unit section. 
+			For example, choose to convert mile into cm and this is allowed because the following unit conversions are available: mile to ft, ft to meters, meters to inches, inches to cms, thus relating mile to cm. <br> <br>
+			To add a conversion to the 'Conversions Sheet' section, click on the Up arrow button. <br>
+			<br>
+			Conversion Sheet:<br>
+			The Conversion Sheet shows all the unit conversion that were uploaded from the different unit sections. A cross button is provided to remove any unit conversion from the Conversion Sheet.
+			The different unit conversion boxes are sortable, i.e., they can be dragged and dropped to changes their positions within the Conversion Sheet section. 
+			<br><br>
+			To save a Conversion sheet, click on the Save Sheet option on the navigation bar at the left. This saved sheet can be loaded back into the application be clicking the Load Sheet in the navigation bar.
+			
 		</div>
 	</div>
 </body>

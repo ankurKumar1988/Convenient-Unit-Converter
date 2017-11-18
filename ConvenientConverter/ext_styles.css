@@ -119,6 +119,7 @@ nav li a:hover:not(.active) {
 	padding-left: 3px;
 	padding-right: 3px;
 	margin-left: 2px;
+	margin-top: 1px;
 	background-color: #b30000;
 	border-color: #b30000;
 }
